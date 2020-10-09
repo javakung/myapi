@@ -102,6 +102,10 @@ async def validation_email(text):
     else:
         return False
     
+
+@app.get("/echo")
+async def myecho(text):  
+    return text  
     
 @app.get("/google-search",response_class=PlainTextResponse)
 def google_search(text):
